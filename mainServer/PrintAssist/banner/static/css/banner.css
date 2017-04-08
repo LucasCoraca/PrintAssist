@@ -1,0 +1,26 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+
+.logo {
+  position: relative;
+  left: 10px;
+  top: 10px;
+
+}
+
+
+/*Fonts*/
+
+@font-face {
+    font-family: sintony-bold;
+    src: url(/static/fonts/Sintony-Bold.otf);
+}
+
+@font-face {
+    font-family: sintony-regular;
+    src: url(/static/fonts/Sintony-Regular.otf);
+}
