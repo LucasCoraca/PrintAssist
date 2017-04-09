@@ -1,26 +1,274 @@
 html, body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-y: hidden;
 
 }
 
-.logo {
+.header {
   position: relative;
-  left: 10px;
-  top: 10px;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: scroll;
+}
+
+.about {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ecf0f1;
+}
+
+.news {
+  width: 100vw;
+  height: 100vh;
 
 }
 
+/* Welcome Screen*/
+
+:root {
+    --loading-color: #ecf0f1;
+    --time: 1.5s;
+    --delay: 0s;
+}
+
+.container {
+    position: absolute;
+    width: 744px;
+    height: 131px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.welcomeScreen {
+    background-color: #2980b9;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    z-index: 1px;
+}
+
+.print {
+    opacity: 0;
+    left: 35px;
+    top: 0px;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    font-size: 92px;
+    color: var(--loading-color);
+    font-family: opensans-bold;
+}
+
+.assist {
+    opacity: 0;
+    color: var(--loading-color);
+    right: 0px;
+    top: 0px;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    font-size: 92px;
+    font-family: opensans-bold;
+}
+
+.loadcss {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 200px;
+    height: 120px;
+}
+
+.hotend {
+    position: absolute;
+    bottom: 25px;
+    left: 10px;
+    border-top: 30px solid var(--loading-color);
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 8px;
+    animation: hotendmove var(--time) var(--delay) 1 ease-in;
+    animation-fill-mode: forwards;
+}
+
+.layer1 {
+    position: absolute;
+    width: 130px;
+    height: 15px;
+    left: 35px;
+    bottom: 5px;
+    animation: layer1a var(--time) var(--delay) 1 ease-in;
+    background-color: var(--loading-color);
+    animation-fill-mode: forwards;
+}
+
+.layer2 {
+    position: absolute;
+    width: 130px;
+    height: 15px;
+    animation: layer2a var(--time) var(--delay) 1 ease-in;
+    right: 35px;
+    bottom: 35px;
+    background-color: var(--loading-color);
+    animation-fill-mode: forwards;
+}
+
+.layer3 {
+    position: absolute;
+    width: 130px;
+    height: 15px;
+    left: 35px;
+    bottom: 65px;
+    animation: layer3a var(--time) var(--delay) 1 ease-in;
+    background-color: var(--loading-color);
+    animation-fill-mode: forwards;
+}
+
+.hotend, .layer1, .layer2, .layer3 {
+    animation-play-state: paused, paused,paused;
+    -webkit-animation-play-state: paused;
+}
+
+@keyframes hotendmove {
+    0% {
+        left: 10px;
+        bottom: 25px;
+        opacity: 0;
+    }
+    3% {
+        left: 10px;
+        bottom: 25px;
+        opacity: 1;
+    }
+    26% {
+        left: 130px;
+        bottom: 25px;
+        opacity: 1;
+    }
+    34% {
+        left: 130px;
+        bottom: 55px;
+        opacity: 1;
+    }
+    62% {
+        left: 10px;
+        bottom: 55px;
+        opacity: 1;
+    }
+    66% {
+        left: 10px;
+        bottom: 85px;
+        opacity: 1;
+    }
+    94% {
+        left: 130px;
+        bottom: 85px;
+        opacity: 1;
+    }
+    100% {
+        left: 130px;
+        bottom: 85px;
+        opacity: 1;
+    }
+}
+
+@keyframes layer1a {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    3% {
+        width: 0;
+        opacity: 1;
+    }
+    27% {
+        width: 130px;
+        opacity: 1;
+    }
+    94% {
+        width: 130px;
+        opacity: 1;
+    }
+    100% {
+        width: 130px;
+        opacity: 1;
+    }
+}
+
+@keyframes layer2a {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    34% {
+        width: 0;
+        opacity: 1;
+    }
+    63% {
+        width: 130px;
+        opacity: 1;
+    }
+    94% {
+        width: 130px;
+        opacity: 1;
+    }
+    100% {
+        width: 130px;
+        opacity: 1;
+    }
+}
+
+@keyframes layer3a {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    66% {
+        width: 0;
+        opacity: 1;
+    }
+    94% {
+        width: 130px;
+        opacity: 1;
+    }
+    100% {
+        width: 130px;
+        opacity: 1;
+    }
+}
 
 /*Fonts*/
 
 @font-face {
-    font-family: sintony-bold;
-    src: url(/static/fonts/Sintony-Bold.otf);
+    font-family: opensans-bold;
+    src: url(/static/fonts/OpenSans-Bold.ttf);
 }
 
 @font-face {
-    font-family: sintony-regular;
-    src: url(/static/fonts/Sintony-Regular.otf);
+    font-family: opensans-itallic;
+    src: url(/static/fonts/OpenSans-Italic.ttf);
+}
+
+@font-face {
+    font-family: opensans-light;
+    src: url(/static/fonts/OpenSans-Light.ttf);
+}
+
+
+@font-face {
+    font-family: opensans-regular;
+    src: url(/static/fonts/OpenSans-Regular.ttf);
 }

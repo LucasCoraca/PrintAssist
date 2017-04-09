@@ -2,6 +2,16 @@
 <link rel="stylesheet" href="{% static 'css/header.css' %}">
 <script src="{% static 'js/header.js' %}"></script>
 
-<div class="header">
-   <img src="{% static 'images/logoSmall.png' %}" class="logo" id="logo"></img> 
+<div class="header" id="header">
+    <img src="{% static 'images/logoSmall.png' %}" class="logo" id="logo"></img>
+    {% if user.is_authenticated %}
+
+    {% else %}
+    <ul class="navBar" id="navBar">
+        <li class="aboutB" id="aboutB"><a class="disabled" href="#">ABOUT</a></li>
+        <li class="newsB" id="newsB"><a class="disabled" href="#">NEWS</a></li>
+        <li><a href="/login">LOGIN</a></li>
+        <li><a href="/signin">SIGN IN</a></li>
+    </ul>
+    {% endif %}
 </div>

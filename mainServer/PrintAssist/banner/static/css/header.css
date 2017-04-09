@@ -1,28 +1,96 @@
+html {
+}
+
 .header {
-  position: fixed;
-  background-color: #3498db;
-  width: 100vw;
-  height: 60px;
-  top: 0;
+    position: relative;
+    background-color: #2980b9;
+    width: 100vw;
+    height: 40px;
+    top: 0;
+}
+
+.logo {
+    position: relative;
+    left: 70px;
+    top: 7px;
+    width: 140px;
+    height: 25px;
+}
+
+.navBar {
+    list-style-type: none;
+    position: absolute;
+    right: 70px;
+    margin: auto;
+    top: 10px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.navBar li {
+    display: inline;
+    font-size: 15px;
+    font-family: roboto;
+    margin-left: 10px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.navBar p {
+    text-align: center;
+    text-decoration: none;
+    color: #ecf0f1;
+    border-bottom: 2px solid rgba(255, 0, 0, 0);
+    transition: border-color .5s;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.navBar a {
+    text-align: center;
+    text-decoration: none;
+    color: #ecf0f1;
+    border-bottom: 2px solid rgba(255, 0, 0, 0);
+    transition: border-color .5s;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.navBar li:hover a {
+    border-color: rgba(255, 255, 255, 1);
+    transition: border-color .5s;
+}
+
+
+/*Fonts*/
+
+@font-face {
+    font-family: sintony-bold;
+    src: url(/static/fonts/Sintony-Bold.ttf);
 }
 
 @font-face {
-    font-family: opensans-bold;
-    src: url(/static/fonts/OpenSans-Bold.ttf);
-}
-
-@font-face {
-    font-family: opensans-itallic;
-    src: url(/static/fonts/OpenSans-Italic.ttf);
-}
-
-@font-face {
-    font-family: opensans-light;
-    src: url(/static/fonts/OpenSans-Light.ttf);
-}
-
-
-@font-face {
-    font-family: opensans-regular;
-    src: url(/static/fonts/OpenSans-Regular.ttf);
+    font-family: roboto;
+    src: url("https://fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2");
 }

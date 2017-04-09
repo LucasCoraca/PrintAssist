@@ -1,15 +1,45 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>Print Assist</title> {% load staticfiles %}
-  <link rel="stylesheet" href="{% static 'css/banner.css' %}">
+    <meta charset="utf-8">
+    <title>Print Assist</title> {% load staticfiles %}
+    <link rel="icon" href="{% static 'images/icon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/banner.css' %}">
 </head>
+
+<!-- have to load this first cos header gives error if not  -->
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/jquery-ui.js' %}"></script>
+<script src="{% static 'js/banner.js' %}"></script>
+<script src="{% static 'js/header.js' %}"></script>
+
 <body>
-  <!-- import header template  -->
-  {% include 'header.html' %}
-  <script src="{% static 'js/jquery.js' %}"></script>
-  <script src="{% static 'js/jquery-ui.js' %}"></script>
+    <!-- WelcomeScreen -->
+    <div class="welcomeScreen" id="welcomeScreen">
+        <div class="container" id="container">
+            <div class="loadcss" id="loadcss">
+                <div class="hotend" id="hotend"></div>
+                <div class="layer1" id="layer1"></div>
+                <div class="layer2" id="layer2"></div>
+                <div class="layer3" id="layer3"></div>
+            </div>
+            <p class="print" id="print">Print</p>
+            <p class="assist" id="assist">Assist</p>
+        </div>
+    </div>
+    <!-- import header template  -->
+    {% include 'header.html' %}
+    <!-- main page -->
+    <div class="main" id="main">
+        <div class="about" id="about">
+            test
+        </div>
+        <div class="news" id="news">
+
+        </div>
+    </div>
 </body>
+
 </html>
