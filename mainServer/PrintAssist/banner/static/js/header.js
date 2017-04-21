@@ -1,6 +1,5 @@
 $(window).load(
     function() {
-        $(".navBar").addClass("unselectable");
         $(".navBar a").hover(function() {
             $(this).animate({
                 color: "#FFFFFF"

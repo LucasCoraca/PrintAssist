@@ -20,5 +20,7 @@ from banner import urls
 
 urlpatterns = [
     url(r'^$', views.banner, name='banner'),
+    url(r'^printassist$', views.printAssist, name='editor'),
+    url(r'^thebox$', views.theBox, name='send_command'),
     url(r'^admin/', admin.site.urls),
 ]

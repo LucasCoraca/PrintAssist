@@ -8,3 +8,9 @@ from django.contrib.auth import authenticate, login, logout
 
 def banner (request):
     return render_to_response('banner/banner.html')
+
+def printAssist (request):
+    return render_to_response('banner/printassist.html')
+
+def theBox (request):
+    return render_to_response('banner/theBox.html')

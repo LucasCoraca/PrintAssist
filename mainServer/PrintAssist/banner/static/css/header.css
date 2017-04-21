@@ -1,9 +1,8 @@
-html {
-}
+html {}
 
 .header {
     position: relative;
-    background-color: #2980b9;
+    background-color: #22313F;
     width: 100vw;
     height: 40px;
     top: 0;
@@ -60,7 +59,7 @@ html {
 }
 
 .disabled {
-  pointer-events: none;
+    pointer-events: none;
 }
 
 .navBar a {

@@ -12,7 +12,8 @@ html, body {
 .main {
   width: 100vw;
   height: 100vh;
-  overflow-x: scroll;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .about {
@@ -21,234 +22,132 @@ html, body {
   background-color: #ecf0f1;
 }
 
+.leftSelector {
+    position: absolute;
+    font-size: 60px;
+    font-family:  roboto;
+    top: 35vh;
+    left: 10vw;
+    color: #ecf0f1;
+    cursor: pointer;
+    z-index: 2;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.newsvid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0.6;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover;
+}
+
+.newsTitle {
+  position: absolute;
+  left: 20vw;
+  bottom: 10vh;
+  z-index: 2;
+  font-family: roboto;
+  font-size: 60px;
+  color: #ecf0f1;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.subtitle {
+  position: absolute;
+  left: 20vw;
+  bottom: 0vh;
+  font-family: roboto;
+  font-size: 40px;
+  z-index: 2;
+  color: #ecf0f1;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.aboutSlide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    top: 0px;
+    left: 0;
+    right: 0;
+    background-color: #95a5a6;
+    overflow: hidden;
+    padding: 0;
+}
+
+.aboutSlide ul {
+        position: relative;
+        margin: 0;
+
+        padding: 0;
+        height: 100%;
+        list-style: none;
+        overflow: hidden;
+    }
+
+.aboutSlide ul li {
+       position: relative;
+       display: block;
+       float: left;
+       margin: 0;
+       padding: 0;
+       width: 100vw;
+       height: 100%;
+       background: #bdc3c7;
+       text-align: center;
+       line-height: 300px;
+   }
+
+.rightSelector {
+    position: absolute;
+    font-size: 60px;
+    font-family: roboto;
+    right: 10vw;
+    top: 35vh;
+    color: #ecf0f1;
+    cursor: pointer;
+    z-index: 2;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .news {
   width: 100vw;
   height: 100vh;
 
 }
 
-/* Welcome Screen*/
-
-:root {
-    --loading-color: #ecf0f1;
-    --time: 1.5s;
-    --delay: 0s;
-}
-
-.container {
-    position: absolute;
-    width: 744px;
-    height: 131px;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-
-.welcomeScreen {
-    background-color: #2980b9;
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    z-index: 1px;
-}
-
-.print {
-    opacity: 0;
-    left: 35px;
-    top: 0px;
-    bottom: 0;
-    margin: auto;
-    position: absolute;
-    font-size: 92px;
-    color: var(--loading-color);
-    font-family: opensans-bold;
-}
-
-.assist {
-    opacity: 0;
-    color: var(--loading-color);
-    right: 0px;
-    top: 0px;
-    bottom: 0;
-    margin: auto;
-    position: absolute;
-    font-size: 92px;
-    font-family: opensans-bold;
-}
-
-.loadcss {
-    opacity: 0;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    width: 200px;
-    height: 120px;
-}
-
-.hotend {
-    position: absolute;
-    bottom: 25px;
-    left: 10px;
-    border-top: 30px solid var(--loading-color);
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-    height: 0;
-    width: 8px;
-    animation: hotendmove var(--time) var(--delay) 1 ease-in;
-    animation-fill-mode: forwards;
-}
-
-.layer1 {
-    position: absolute;
-    width: 130px;
-    height: 15px;
-    left: 35px;
-    bottom: 5px;
-    animation: layer1a var(--time) var(--delay) 1 ease-in;
-    background-color: var(--loading-color);
-    animation-fill-mode: forwards;
-}
-
-.layer2 {
-    position: absolute;
-    width: 130px;
-    height: 15px;
-    animation: layer2a var(--time) var(--delay) 1 ease-in;
-    right: 35px;
-    bottom: 35px;
-    background-color: var(--loading-color);
-    animation-fill-mode: forwards;
-}
-
-.layer3 {
-    position: absolute;
-    width: 130px;
-    height: 15px;
-    left: 35px;
-    bottom: 65px;
-    animation: layer3a var(--time) var(--delay) 1 ease-in;
-    background-color: var(--loading-color);
-    animation-fill-mode: forwards;
-}
-
-.hotend, .layer1, .layer2, .layer3 {
-    animation-play-state: paused, paused,paused;
-    -webkit-animation-play-state: paused;
-}
-
-@keyframes hotendmove {
-    0% {
-        left: 10px;
-        bottom: 25px;
-        opacity: 0;
-    }
-    3% {
-        left: 10px;
-        bottom: 25px;
-        opacity: 1;
-    }
-    26% {
-        left: 130px;
-        bottom: 25px;
-        opacity: 1;
-    }
-    34% {
-        left: 130px;
-        bottom: 55px;
-        opacity: 1;
-    }
-    62% {
-        left: 10px;
-        bottom: 55px;
-        opacity: 1;
-    }
-    66% {
-        left: 10px;
-        bottom: 85px;
-        opacity: 1;
-    }
-    94% {
-        left: 130px;
-        bottom: 85px;
-        opacity: 1;
-    }
-    100% {
-        left: 130px;
-        bottom: 85px;
-        opacity: 1;
-    }
-}
-
-@keyframes layer1a {
-    0% {
-        width: 0;
-        opacity: 0;
-    }
-    3% {
-        width: 0;
-        opacity: 1;
-    }
-    27% {
-        width: 130px;
-        opacity: 1;
-    }
-    94% {
-        width: 130px;
-        opacity: 1;
-    }
-    100% {
-        width: 130px;
-        opacity: 1;
-    }
-}
-
-@keyframes layer2a {
-    0% {
-        width: 0;
-        opacity: 0;
-    }
-    34% {
-        width: 0;
-        opacity: 1;
-    }
-    63% {
-        width: 130px;
-        opacity: 1;
-    }
-    94% {
-        width: 130px;
-        opacity: 1;
-    }
-    100% {
-        width: 130px;
-        opacity: 1;
-    }
-}
-
-@keyframes layer3a {
-    0% {
-        width: 0;
-        opacity: 0;
-    }
-    66% {
-        width: 0;
-        opacity: 1;
-    }
-    94% {
-        width: 130px;
-        opacity: 1;
-    }
-    100% {
-        width: 130px;
-        opacity: 1;
-    }
-}
 
 /*Fonts*/
 

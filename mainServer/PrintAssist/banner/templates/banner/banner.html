@@ -13,30 +13,41 @@
 <script src="{% static 'js/jquery.js' %}"></script>
 <script src="{% static 'js/jquery-ui.js' %}"></script>
 <script src="{% static 'js/banner.js' %}"></script>
-<script src="{% static 'js/header.js' %}"></script>
 
 <body>
-    <!-- WelcomeScreen -->
-    <div class="welcomeScreen" id="welcomeScreen">
-        <div class="container" id="container">
-            <div class="loadcss" id="loadcss">
-                <div class="hotend" id="hotend"></div>
-                <div class="layer1" id="layer1"></div>
-                <div class="layer2" id="layer2"></div>
-                <div class="layer3" id="layer3"></div>
-            </div>
-            <p class="print" id="print">Print</p>
-            <p class="assist" id="assist">Assist</p>
-        </div>
-    </div>
     <!-- import header template  -->
     {% include 'header.html' %}
     <!-- main page -->
     <div class="main" id="main">
-        <div class="about" id="about">
-            test
-        </div>
         <div class="news" id="news">
+            <div class="aboutSlide" id="aboutSlide">
+                <p class="leftSelector">
+                    <</p>
+                        <p class="rightSelector">></p>
+                        <ul>
+                            <li style="background-color: #000;">
+                                <p class="newsTitle" id="newsTitle">Título da notícia</p>
+                                <p class="subtitle" id="subtitle">subtítulo da notícia fale mais</p>
+                                <video playsinline autoplay muted loop class="newsvid">
+                                  <source src="{% static 'images/news.webm' %}" type="video/webm">
+                                </video>
+                              </li>
+                            <li style="background: url('https://i.ytimg.com/vi/O2thSsQrZUM/maxresdefault.jpg') no-repeat center;">
+                                <p class="newsTitle" id="newsTitle">Título da notícia</p>
+                                <p class="subtitle" id="subtitle">subtítulo da notícia fale mais</p>
+                            </li>
+                            <li style="background: url('https://i.ytimg.com/vi/O2thSsQrZUM/maxresdefault.jpg') no-repeat center;">
+                                <p class="newsTitle" id="newsTitle">Título da notícia</p>
+                                <p class="subtitle" id="subtitle">subtítulo da notícia fale mais</p>
+                            </li>
+                            <li style="background: url('https://i.ytimg.com/vi/O2thSsQrZUM/maxresdefault.jpg') no-repeat center;">
+                                <p class="newsTitle" id="newsTitle">Título da notícia</p>
+                                <p class="subtitle" id="subtitle">subtítulo da notícia fale mais</p>
+                            </li>
+                        </ul>
+            </div>
+        </div>
+        <div class="about" id="about">
 
         </div>
     </div>

@@ -4,14 +4,11 @@
 
 <div class="header" id="header">
     <img src="{% static 'images/logoSmall.png' %}" class="logo" id="logo"></img>
-    {% if user.is_authenticated %}
-
-    {% else %}
     <ul class="navBar" id="navBar">
-        <li class="aboutB" id="aboutB"><a class="disabled" href="#">ABOUT</a></li>
-        <li class="newsB" id="newsB"><a class="disabled" href="#">NEWS</a></li>
-        <li><a href="/login">LOGIN</a></li>
-        <li><a href="/signin">SIGN IN</a></li>
+        <li class="newsB" id="newsB"><a>NOVIDADES</a></li>
+        <li class="aboutB" id="aboutB"><a>SOBRE</a></li>
+        <li><a href="/thebox">THE BOX</a></li>
+        <li><a href="/printassist">PRINT ASSIST</a></li>
+        <li><a href="/contato">CONTATO</a></li>
     </ul>
-    {% endif %}
 </div>
