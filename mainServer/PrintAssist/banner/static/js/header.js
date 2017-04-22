@@ -15,6 +15,15 @@ $(window).load(
         document.getElementById("newsB").onclick = function fun() {
             $("#main").scrollTo("#news", 700);
         };
+        document.getElementById("theboxB").onclick = function fun() {
+            $("#main").scrollTo("#theBox", 700);
+        };
+        document.getElementById("printassistB").onclick = function fun() {
+            $("#main").scrollTo("#printassist", 700);
+        };
+        document.getElementById("contactB").onclick = function fun() {
+            $("#main").scrollTo("#contact", 700);
+        };
     }
 );
 

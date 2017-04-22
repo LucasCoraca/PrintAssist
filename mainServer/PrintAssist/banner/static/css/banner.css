@@ -1,31 +1,30 @@
 html, body {
-  margin: 0;
-  padding: 0;
-  overflow-y: hidden;
-
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
 }
 
 .header {
-  position: relative;
+    position: relative;
 }
 
 .main {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  overflow-y: scroll;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
 .about {
-  width: 100vw;
-  height: 100vh;
-  background-color: #ecf0f1;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ecf0f1;
 }
 
 .leftSelector {
     position: absolute;
     font-size: 60px;
-    font-family:  roboto;
+    font-family: roboto;
     top: 35vh;
     left: 10vw;
     color: #ecf0f1;
@@ -58,35 +57,35 @@ html, body {
 }
 
 .newsTitle {
-  position: absolute;
-  left: 20vw;
-  bottom: 10vh;
-  z-index: 2;
-  font-family: roboto;
-  font-size: 60px;
-  color: #ecf0f1;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    position: absolute;
+    left: 20vw;
+    bottom: 10vh;
+    z-index: 2;
+    font-family: roboto;
+    font-size: 60px;
+    color: #ecf0f1;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .subtitle {
-  position: absolute;
-  left: 20vw;
-  bottom: 0vh;
-  font-family: roboto;
-  font-size: 40px;
-  z-index: 2;
-  color: #ecf0f1;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    position: absolute;
+    left: 20vw;
+    bottom: 0vh;
+    font-family: roboto;
+    font-size: 40px;
+    z-index: 2;
+    color: #ecf0f1;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .aboutSlide {
@@ -103,27 +102,26 @@ html, body {
 }
 
 .aboutSlide ul {
-        position: relative;
-        margin: 0;
-
-        padding: 0;
-        height: 100%;
-        list-style: none;
-        overflow: hidden;
-    }
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    list-style: none;
+    overflow: hidden;
+}
 
 .aboutSlide ul li {
-       position: relative;
-       display: block;
-       float: left;
-       margin: 0;
-       padding: 0;
-       width: 100vw;
-       height: 100%;
-       background: #bdc3c7;
-       text-align: center;
-       line-height: 300px;
-   }
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100%;
+    background: #bdc3c7;
+    text-align: center;
+    line-height: 300px;
+}
 
 .rightSelector {
     position: absolute;
@@ -143,9 +141,25 @@ html, body {
 }
 
 .news {
-  width: 100vw;
-  height: 100vh;
+    width: 100vw;
+    height: 100vh;
+}
 
+.theBox {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ecf0f1;
+}
+
+.printassist {
+    width: 100vw;
+    height: 100vh;
+}
+
+.contact {
+    background-color: #ecf0f1;
+    width: 100vw;
+    height: 100vh;
 }
 
 
@@ -165,7 +179,6 @@ html, body {
     font-family: opensans-light;
     src: url(/static/fonts/OpenSans-Light.ttf);
 }
-
 
 @font-face {
     font-family: opensans-regular;
