@@ -1,11 +1,12 @@
 html {}
 
 .header {
-    position: relative;
+    position: fixed;
     background-color: #22313F;
     width: 100vw;
     height: 40px;
     top: 0;
+    z-index: 10;
 }
 
 .logo {
