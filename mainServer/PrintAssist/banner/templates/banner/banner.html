@@ -12,6 +12,7 @@
 <!-- have to load this first cos header gives error if not  -->
 <script src="{% static 'js/jquery.js' %}"></script>
 <script src="{% static 'js/jquery-ui.js' %}"></script>
+<script src="{% static 'js/jquery.visible.js' %}"></script>
 <script src="{% static 'js/banner.js' %}"></script>
 
 <body>
@@ -53,15 +54,21 @@
         <div class="theBox" id="theBox">
             <img src="{% static 'images/profile.png' %}" class="printer" id="printer"></img>
             <div class="container" id="container">
-            <p class="textP" id="textP">Simples, confiável, acessível, direto ao ponto.</p>
-            <p class="textP2" id="textP2">Essas são algumas caracteristicas que definem essa máquina.</p>
-            <div class="learnMore" id="learnMore">
-              <p>Saiba mais</p>
+                <p class="textP" id="textP">Simples, conectada, acessível.</p>
+                <p class="textP2" id="textP2">Essas são algumas caracteristicas que definem essa máquina.</p>
+                <div class="learnMore" id="learnMore">
+                    <p>Saiba mais</p>
+                </div>
             </div>
-          </div>
         </div>
         <div class="printassist" id="printassist">
-
+            <img src="{% static 'images/logoLarge.png' %}" class="logoL" id="logoL"></img>
+            <div class="cont" id="cont">
+                <p>Esteja sempre conectado com a sua impressora.</p>
+                <div class="learnMoreP" id="learnMoreP">
+                    <p>Saiba mais</p>
+                </div>
+            </div>
         </div>
         <div class="contact" id="contact">
 

@@ -48,5 +48,4 @@ jQuery(document).ready(function($) {
         int = setInterval(moveRight, 10000);
         moveRight();
     });
-
 });
