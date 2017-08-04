@@ -1,0 +1,57 @@
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/printassist.css' %}">
+<script src="{% static 'js/printassist.js' %}"></script>
+<div class="news" id="news">
+  <p class="leftSelector">
+    <</p>
+      <p class="rightSelector">></p>
+      <p class="newsHeader" id="newsHeader">News</p>
+      <p class="newsTitle" id="newsTitle">News title here!</p>
+      <ul>
+        <li style="background: url('https://i.ytimg.com/vi/O2thSsQrZUM/maxresdefault.jpg') no-repeat center;"></li>
+        <li style="background: url('https://i.ytimg.com/vi/O2thSsQrZUM/maxresdefault.jpg') no-repeat center;"></li>
+        <li style="background: url('https://i.ytimg.com/vi/O2thSsQrZUM/maxresdefault.jpg') no-repeat center;"></li>
+        <li style="background: url('https://i.ytimg.com/vi/O2thSsQrZUM/maxresdefault.jpg') no-repeat center;"></li>
+      </ul>
+</div>
+<div class="lowerContainer" id="lowerContainer">
+  <div class="internalHeader" id="internalHeader">    <img class="img" id="img" src="{% static 'images/files.png' %}" </img>
+      <p class="filesTitle" id="filesTitle">Recent Files</p>
+      <a class="uploadB" id="uploadB" title="Upload File"><img src="{% static 'images/upload.png' %}"></img>Upload</a></div>
+  <div id="recentFiles" class="recentFiles">
+    <!--file block(will be replaced with jinja logic once server is ready) -->
+    <div class="fileBlock" id="fileBlock">
+      <img src="https://thingiverse-production-new.s3.amazonaws.com/renders/d5/f4/d7/06/26/10mm_test_cube_display_large.jpg"></img>
+      <a class="printB" id="printB" title="Print it">Print it!</a>
+      <div class="infoContainer">
+        <p class="" id="fileInfo">File name:</p>
+        <p class="" id="fileInfo">Upload date:</p>
+        <p class="" id="fileInfo">Print time (h):</p>
+        <p class="" id="fileInfo">Plastic (g):</p>
+      </div>
+    </div>
+  </div>
+  <div class="printerStatus" id="printerStatus">
+    <img class="img" src="{% static 'images/printer.png' %}"></img>
+    <p class="printerTitle" id="printerTitle">3D Printer:<select class="printerSelect" id="printerSelect">
+      <option value="none">---</option>
+    </select></p>
+    <div class="liveView" id="liveView"></div>
+    <div class="mainInfoContainer">
+      <div class="printerInfoContainer">
+        <p class="printerInfo">Status:</p>
+        <p class="printerInfo">Now printing:</p>
+        <p class="printerInfo">Printing Time:</p>
+      </div>
+      <div class="printerInfoContainer1">
+        <p class="printerInfo">Time left:</p>
+        <p class="printerInfo">Hotend:</p>
+        <p class="printerInfo">Bed:</p>
+      </div>
+  </div>
+  <div class="buttomContainer">
+      <a class="pauseB">Pause</a>
+      <a class="abortB">Abort</a>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Print Assist</title> {% load staticfiles %}
+  <link rel="icon" href="{% static 'images/icon.ico' %}">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+
+<!-- fix header position -->
+<style>
+{% if user.is_authenticated %}
+.navBar {
+    top: 7px;
+}
+{% else %}
+.navBar {
+    top: 10px;
+}
+{% endif %}
+</style>
+
+<!-- have to load this first cos header gives error if not  -->
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/jquery-ui.js' %}"></script>
+<script src="{% static 'js/jquery.visible.js' %}"></script>
+<script src="{% static 'js/particles.js' %}"></script>
+
+<body>
+  {% if user.is_authenticated %}
+
+  {% else %}
+  <!-- WelcomeScreen -->
+  <script src="{% static 'js/main.js' %}"></script>
+  <div class="welcomeScreen" id="welcomeScreen">
+    <div class="container" id="container">
+      <div class="loadcss" id="loadcss">
+        <div class="hotend" id="hotend"></div>
+        <div class="layer1" id="layer1"></div>
+        <div class="layer2" id="layer2"></div>
+        <div class="layer3" id="layer3"></div>
+      </div>
+      <p class="print" id="print">Print</p>
+      <p class="assist" id="assist">Assist</p>
+    </div>
+  </div>
+  {% endif %}
+  <!-- main page -->
+  <div class="main" id="main">
+    <!-- import header template  -->
+    {% include 'header.html' %}
+    <!-- Test if user is logged  -->
+    {% if user.is_authenticated %}
+      {% include 'main/printAssist.html' %} <!-- Edit printAssist.html for accutual webapp  -->
+    {% else %}
+      <!-- if logged  -->
+      <div class="about" id="about">
+        <p class="yourPrinter" id="yourPrinter">Your 3D Printer:</p>
+        <p id="change">Aways connected"</p>
+        <div class="particles-js" id="particles-js"></div>
+      </div>
+      <div class="features" id="features">
+      </div>
+      <div class="theTeam" id="theTeam">
+      </div>
+    {% endif %}
+  </div>
+</body>
+
+</html>

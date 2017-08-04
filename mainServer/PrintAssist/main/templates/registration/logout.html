@@ -1,0 +1,13 @@
+{% extends "registration/registration_base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Logged out" %}{% endblock %}
+
+{% block content %}
+<p>{% trans "Successfully logged out" %}.</p>
+<script>
+setInterval(function() {
+    window.location = "{% url 'main' %}";
+}, 3000);
+</script>
+{% endblock %}

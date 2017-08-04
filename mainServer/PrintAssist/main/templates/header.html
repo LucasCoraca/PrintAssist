@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/header.css' %}">
+<script src="{% static 'js/header.js' %}"></script>
+
+<div class="header" id="header">
+  {% if user.is_authenticated %}
+    <img src="{% static 'images/logoSmall.png' %}" class="logo" id="logo"></img>
+    <ul class="navBar" id="navBar">
+        <li class="filesB" id="filesB"><a title="Files"><img src="{% static 'images/files.png' %}"</img></a></li>
+        <li class="printerB" id="printerB"><a title="Printer Settings"><img src="{% static 'images/printer.png' %}"</img></a></li>
+        <li class="notificationB" id="notificationB"><a title="Notifications"><img src="{% static 'images/notification.png' %}"</img></a></li>
+        <li class="userB" id="userB"><a title="User Settings"><img src="{% static 'images/user.png' %}"</img></a></li>
+        <li class="logoutB" id="logoutB"><a title="Logout" href="/accounts/logout">LOGOUT</a></li>
+    </ul>
+    {% else %}
+    <img src="{% static 'images/logoSmall.png' %}" class="logo" id="logo"></img>
+    <ul class="navBar" id="navBar">
+        <li class="aboutB" id="aboutB"><a>ABOUT</a></li>
+        <li class="featuresB" id="featuresB"><a>FEATURES</a></li>
+        <li class="teamB" id="teamB"><a>THE TEAM</a></li>
+        <li><a href="/suporte">SUPPORT</a></li>
+        <li class="loginB" id="loginB"><a href="/accounts/login">LOGIN</a></li>
+        <li class="registerB" id="registerB"><a href="/accounts/register">REGISTER</a></li>
+    </ul>
+    {% endif %}
+</div>
